@@ -1,0 +1,7 @@
+app:
+  name: drew
+  accumulo:
+    zookeepers: test
+    instance: test
+    username: root
+    password: secret
