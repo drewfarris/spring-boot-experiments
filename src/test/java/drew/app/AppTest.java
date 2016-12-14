@@ -1,6 +1,7 @@
 package drew.app;
 
 import drew.app.conf.AppConfiguration;
+import drew.app.util.MiniAccumuloBean;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
