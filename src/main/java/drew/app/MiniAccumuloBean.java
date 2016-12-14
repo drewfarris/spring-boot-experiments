@@ -12,6 +12,7 @@ import javax.annotation.PreDestroy;
 import java.io.File;
 import java.io.IOException;
 
+/** A simple Bean that will start and stop a MiniAccumuloCluster */
 public class MiniAccumuloBean {
 
     private final File tempDir;
@@ -23,7 +24,6 @@ public class MiniAccumuloBean {
     public MiniAccumuloBean(File tempDir, String password) {
         this.tempDir = tempDir;
         this.password = password;
-
     }
 
     @PostConstruct
@@ -31,8 +31,6 @@ public class MiniAccumuloBean {
         MiniAccumuloConfigImpl config = new MiniAccumuloConfigImpl(tempDir, password);
         config.setZooKeeperStartupTime(100000);
         cluster = new MiniAccumuloClusterImpl(config);
-        cluster.start();
-
         zookeepers = cluster.getZooKeepers();
         instance = cluster.getInstanceName();
         cluster.start();

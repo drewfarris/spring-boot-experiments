@@ -17,6 +17,9 @@ import java.io.File;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/** This unit test will inject the configuration from MiniAccumuloCluster into AppConfiguration
+ *  so that it will be used with testing AppMain
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration(classes = AppTest.TestConfig.class)
